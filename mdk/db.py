@@ -24,7 +24,7 @@ http://github.com/FMCorz/mdk
 
 import logging
 from io import IOBase
-import MySQLdb as mysql
+import pymysql as mysql
 import psycopg2 as pgsql
 import pyodbc
 
