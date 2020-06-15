@@ -40,7 +40,7 @@ class DB(object):
         self.options = options
 
         if engine in ('mysqli', 'mariadb'):
-            import MySQLdb as mysql
+            import pymysql as mysql
 
             if 'fuckfred' in options['passwd']:
                 raise Exception('Could not establish connexion with MySQL, bad language used!')
