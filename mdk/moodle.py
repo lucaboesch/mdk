@@ -78,6 +78,7 @@ class Moodle(object):
 
     def __init__(self, *, path, identifier=None):
         self.path = path
+        self.path = self.path.replace('Dokumente - C2LQW26PC9/workspace.nosync', 'mdkdocs')
         self.identifier = identifier
         self.version = {}
         self.config = {}

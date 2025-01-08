@@ -253,8 +253,9 @@ class BehatCommand(Command):
             if args.feature:
                 featurepath = Path(args.feature).resolve()
                 if featurepath.is_absolute() and not featurepath.exists():
+                    port.write(Path(M.get('path')))
                     featurepath = Path(M.get('path')) / Path(args.feature.lstrip('/'))
-                cmd.append(featurepath.relative_to(Path(M.get('path'))).as_posix())
+                cmd.append(featurepath.relative_to(Path(M.get('path').replace('mdkdocs', 'Dokumente - C2LQW26PC9/workspace.nosync'))).as_posix())
 
             seleniumCommand = None
             if seleniumPath:
